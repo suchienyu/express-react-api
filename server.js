@@ -1,7 +1,8 @@
+require('dotenv').config();
 const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-const pool = require('../database/db'); // 導入資料庫連接
+const pool = require('./database/db'); // 導入資料庫連接
 const app = express();
 const PORT = 5001;
 
@@ -67,7 +68,8 @@ app.post('/api/todos', async (req, res) => {
 
 //刪除代辦事項
 app.delete('/api/todos/:id', async (req, res) => {
-    const { id } = req.params;
+    
+    
     try {
       await pool.query('UPDATE todos SET deleted = TRUE WHERE id = $1', [id]);
       res.json({ id });
