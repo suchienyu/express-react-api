@@ -3,12 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject",
-    "predeploy":"npm run build",
-    "deploy":"gh-pages"
+    "dev":"node server.js",
+    "start":"pm2 start -i 2 --name  server server.js "
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
