@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev":"nodemon server.js",
-    "start":"pm2 start -i 2 --name  server server.js "
+    "dev": "nodemon server.js",
+    "start-pm2": "pm2 start -i 2 --name  server server.js ",
+    "start": "node server.js"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -15,6 +16,7 @@
     "express-session": "^1.18.0",
     "http-errors": "~1.6.3",
     "jade": "~1.11.0",
-    "morgan": "~1.9.1"
+    "morgan": "~1.9.1",
+    "pg": "^8.12.0"
   }
 }
