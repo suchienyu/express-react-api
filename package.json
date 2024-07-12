@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "dev":"node server.js",
+    "dev":"nodemon server.js",
     "start":"pm2 start -i 2 --name  server server.js "
   },
   "dependencies": {
